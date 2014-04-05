@@ -1,0 +1,539 @@
+@import 'compass/css3/images'
+
+@mixin font-size($size: 1.6)
+    font-size: ($size * 10) + px
+    font-size: $size + rem
+
+/* ==========================================================================
+ * Browse Happy prompt
+ * ========================================================================== */
+
+.browsehappy
+    margin: 0.2em 0
+    background: #ccc
+    color: #000
+    padding: 0.2em 0
+
+@font-face
+    font-family: 'OpenSans'
+    src: url('fonts/OpenSans-Bold.eot')
+    src: url('fonts/OpenSans-Bold.eot?#iefix') format("embedded-opentype"), url('fonts/OpenSans-Bold.woff') format("woff"), url('fonts/OpenSans-Bold.ttf') format("truetype"), url('fonts/OpenSans-Bold.svg#72800b665ba60a9a58674e2a6befde3a') format("svg")
+    font-style: normal
+    font-weight: 700
+
+
+@font-face
+    font-family: 'OpenSans'
+    src: url('fonts/OpenSans-ExtraBold.eot')
+    src: url('fonts/OpenSans-ExtraBold.eot?#iefix') format("embedded-opentype"), url('fonts/OpenSans-ExtraBold.woff') format("woff"), url('fonts/OpenSans-ExtraBold.ttf') format("truetype"), url('fonts/OpenSans-ExtraBold.svg#5c62748eddf7ad78c6f00917cd538fb7') format("svg")
+    font-style: normal
+    font-weight: 800
+
+
+@font-face
+    font-family: 'OpenSans'
+    src: url('fonts/OpenSans-Light.eot')
+    src: url('fonts/OpenSans-Light.eot?#iefix') format("embedded-opentype"), url('fonts/OpenSans-Light.woff') format("woff"), url('fonts/OpenSans-Light.ttf') format("truetype"), url('fonts/OpenSans-Light.svg#09be4bfe8975a657af6444a6f1d73848') format("svg")
+    font-style: normal
+    font-weight: 200
+
+
+@font-face
+    font-family: 'OpenSans'
+    src: url('fonts/OpenSans-Regular-webfont.eot')
+    src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format("embedded-opentype"), url('fonts/OpenSans-Regular-webfont.woff') format("woff"), url('fonts/OpenSans-Regular-webfont.ttf') format("truetype"), url('fonts/OpenSans-Regular-webfont.svg#dc56f0938c09c27a4156bb0f8f5176a2') format("svg")
+    font-style: normal
+    font-weight: 400
+
+
+*
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    &:before, &:after
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+
+html
+    -webkit-font-smoothing: antialiased
+    font-size: 10px
+
+/* ==========================================================================
+ * Author's custom styles
+ * ========================================================================== */
+
+body
+    font-family: 'OpenSans'
+    font-weight: 200
+    @include font-size(1.3)
+
+section
+    padding: 7rem 3rem
+
+    h1
+        font-family: 'OpenSans'
+        font-weight: 800
+        color: #D74337
+        text-transform: uppercase
+        line-height: 1.1em
+        @include font-size(3)
+
+dl, dd, dt, h1, h2, h3, h4, h5, h6, p
+    margin: 0
+    padding: 0
+
+header
+    padding-top: 1em
+    padding-bottom: 1em
+
+    > h1
+        width: 320px
+        height: 67px
+        text-indent: 200%
+        white-space: nowrap
+        overflow: hidden
+        background: url(../img/header/logo.png)
+
+#intro
+    width: 100%
+    float: none
+    position: relative
+    height: 345px
+    +background(linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 1) 100%))
+
+    @media screen and (min-width: 1200px)
+        padding-top: 0
+        height: 500px
+
+    &:before, &:after
+        content: ''
+        display: block
+        width: 100%
+        height: 4px
+
+        position: absolute
+        top: 0
+        left: 0
+
+        +background(linear-gradient(top left, #547EBB, #547EBB 25%, #DD4B39 25%, #DD4B39 50%, #199047 50%, #199047 75%, #F9C72A 75%, #F9C72A 100%))
+
+    &:after
+        top: auto
+        bottom: 0
+
+    > div
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+
+        color: white
+
+    #map
+        z-index: -1
+        background: black
+
+    h1
+        color: #577EB8
+        margin-top: -0.2em
+        margin-bottom: .5em
+
+    p
+        @media screen and (min-width: 1200px)
+            +font-size(2)
+
+    .wrapper
+        position: static
+        display: table
+        height: 100%
+
+        div
+            display: table-cell
+            vertical-align: middle
+
+        .image
+            display: none
+
+.row > section + div
+    background: #eeeeee
+
+header, #when-where, #join, #schedule, #location > div
+    padding: 7rem 3rem
+
+header
+    padding: 3rem
+
+#when-where
+    background: #CACAD9
+    color: #577EB8
+    font-weight: 800
+
+    dt
+        @include font-size(1)
+        text-transform: uppercase
+
+    dd
+        @include font-size(4)
+
+    dd + dt
+        margin-top: 1em
+
+    .where
+        @include font-size(1.8)
+
+        span
+            @include font-size(4)
+            display: block
+            line-height: 1.1em
+            margin-top: -0.1em
+
+#about
+    background: url(../img/about/background.jpg)
+    background-size: cover
+    color: white
+
+    h1, a
+        font-weight: 800
+        text-decoration: none
+        @include font-size(1.3)
+        color: white
+        margin: 1em 0
+        display: block
+
+    h1
+        margin: 1em 0
+
+#join
+    position: relative
+    background: #FEDA73
+
+    h1
+        +font-size(4)
+        display: inline-block
+        word-spacing: .45em
+        text-align: center
+        margin-bottom: 1em
+
+        span
+            border-bottom: .3em solid #D74337
+            font-size: .5em
+            vertical-align: top
+            display: inline-block
+            margin-top: -0.25em
+
+    img
+        width: 100%
+        height: auto
+
+#about-gdg-campania
+    background: #DBDBEA
+
+    p
+        padding: 1em 0
+
+    h1
+        @include font-size(1)
+        color: black
+        font-weight: 400
+
+#schedule
+    h1
+        margin-bottom: .3em
+
+    h2
+        margin: 1em 0
+        color: #DD4B39
+        +font-size(2)
+        text-align: center
+
+        &:after, &:before
+            content: ''
+            display: block
+            width: 216px
+            height: 11px
+            background: url(../img/schedule/separatorh2.png)
+            margin: 0 auto .2em
+
+        &:after
+            margin: .2em auto 0
+
+    > dl
+        > dt
+            font-weight: 800
+            @include font-size(2)
+        > dt + dt
+            margin-top: .3em
+
+        > dd
+            margin-left: 3.2em
+            margin-bottom: 2em
+
+            &:after
+                content: ''
+                display: block
+                width: 216px
+                height: 11px
+                background: url(../img/separator.png)
+                margin-top: 2.5em
+                margin-left: -3.2em
+        > dd:last-child
+            margin-bottom: 0
+
+            &:after
+                display: none
+
+    .speakers
+        > p
+            font-weight: 800
+            margin-left: -1.5em
+
+        dd
+            @include font-size(1)
+
+        i[class^=icon]
+            @include font-size(1)
+            margin-left: -1em
+            color: #D74337
+
+        a
+            color: black
+            text-decoration: none
+
+#location
+    padding: 0
+    background: #DBDBEA
+
+    img
+        width: 100%
+        height: auto
+
+    *
+        color: #577EB8
+        @include font-size(2.2)
+
+    h1
+        @include font-size(2.7)
+        font-weight: 200
+        margin-top: .5em
+
+    h2
+        @include font-size(1.2)
+        font-weight: 800
+
+#members
+    background: #CAE5AE
+
+    h1
+        @include font-size(1.6)
+        color: #05914B
+        margin-bottom: 1em
+
+    ul
+        padding: 0
+        margin: 0
+
+    li
+        display: inline-block
+        text-align: center
+        vertical-align: top
+        @include font-size(1.2)
+        color: #05914B
+        width: 40%
+        margin-bottom: 1em
+
+        img
+            width: 80px
+            border-radius: 50%
+            border: 2px solid #05914B
+
+        h1
+            @include font-size(1.2)
+            margin: .3em 0 0
+            text-transform: none
+
+        h2
+            @include font-size(1.2)
+            margin: .3em 0
+            text-transform: none
+            font-weight: 200
+
+            &:after
+                content: ''
+                display: inline-block
+                width: 100%
+                height: 5px
+                background: url(../img/members/separator.png) no-repeat center center
+
+        img
+            width: 80px
+            border-radius: 50%
+            border: 2px solid #05914B
+
+#sponsors
+    background: #EEEEEE
+
+    h1
+        color: #878787
+        +font-size(3.4)
+        line-height: 0.9em
+
+        &:after
+            margin-top: .3em
+            content: ''
+            display: block
+            width: 50%
+            max-width: 605px
+            height: 18px
+            background: url(../img/sponsors/separator.png) no-repeat center center
+            background-size: contain
+
+    ul
+        padding: 0
+        margin: 1.5em 0 0
+
+        li
+            display: block
+            margin-right: 1em
+            margin-bottom: 1em
+
+            img
+                max-height: 70px
+                width: auto
+                max-width: 190px
+                height: auto
+
+
+@media screen and (min-width: 640px)
+    #intro
+        padding-top: 30%
+        height: auto
+
+        .wrapper
+            position: absolute
+            padding-left: 3rem
+
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction row
+
+            > div
+                display: table
+                width: 50%
+                position: relative
+                height: 80%
+
+            .image
+                display: block
+
+            > div + div
+                padding-left: 2rem
+
+                img
+                    position: absolute
+                    height: 100%
+                    width: auto
+
+
+    #when-where
+        display: flex
+        justify-content: center
+        align-items: stretch
+        flex-direction column
+
+    .row
+        display: flex
+        justify-content: flex-start
+        align-items: stretch
+
+        >
+            div, section
+                width: 50%
+
+
+@media screen and (min-width: 850px)
+    #join
+        display: flex
+        justify-content: center
+        align-items: stretch
+        flex-direction column
+
+        h1
+            width: 60%
+            +font-size(3.6)
+            margin-bottom: 0
+
+        img
+            width: 30%
+            height: auto
+            position: absolute
+            top: 0
+            bottom: 0
+            margin: auto
+            right: 5%
+
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    #schedule h2
+        &:after, &:before
+            background: url(../img/schedule/separatorh2_2x.png)
+            background-size: 216px 11px
+
+
+    #schedule > dl > dd:after
+        background: url(../img/separator2x.png)
+        background-size: 216px 11px
+    header > h1
+        background: url(../img/header/logo2x.png)
+        background-size: 320px 67px
+    #members li h2:after
+        background: url(../img/members/separator2x.png) no-repeat center center
+        background-size: 71px 5px
+    #sponsors h1:after
+        background: url(../img/sponsors/separator2x.png) no-repeat center center
+        background-size: contain
+
+/* ==========================================================================
+ * Print styles.
+ * Inlined to avoid required HTTP connection: h5bp.com/r
+ * ========================================================================== */
+
+@media print
+    *
+        background: transparent !important
+        color: #000 !important
+        box-shadow: none !important
+        text-shadow: none !important
+    a
+        text-decoration: underline
+        &:visited
+            text-decoration: underline
+        &[href]:after
+            content: " (" attr(href) ")"
+    abbr[title]:after
+        content: " (" attr(title) ")"
+
+    .ir a:after
+        content: ""
+    a
+        &[href^="javascript:"]:after, &[href^="#"]:after
+            content: ""
+    pre, blockquote
+        border: 1px solid #999
+        page-break-inside: avoid
+    thead
+        display: table-header-group
+    tr
+        page-break-inside: avoid
+    img
+        page-break-inside: avoid
+        max-width: 100% !important
+    @page
+        margin: 0.5cm
+
+    p, h2, h3
+        orphans: 3
+        widows: 3
+    h2, h3
+        page-break-after: avoid
