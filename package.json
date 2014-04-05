@@ -1,7 +1,7 @@
 {
-  "name": "DevFest2013",
+  "name": "MID2014",
   "version": "0.0.0",
-  "description": "DevFest2013 ===========",
+  "description": "MID2014 ===========",
   "main": "index.js",
   "dependencies": {
     "gulp-autoprefixer": "~0.0.6",
@@ -41,12 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/GDG-Campania/DevFest2013.git"
+    "url": "git://github.com/GDG-Campania/MID2014.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GDG-Campania/DevFest2013/issues"
+    "url": "https://github.com/GDG-Campania/MID2014/issues"
   },
-  "homepage": "https://github.com/GDG-Campania/DevFest2013"
+  "homepage": "https://github.com/GDG-Campania/MID2014"
 }

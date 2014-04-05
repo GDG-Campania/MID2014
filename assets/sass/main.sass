@@ -399,10 +399,16 @@ header
             margin-bottom: 1em
 
             img
-                max-height: 70px
+                max-height: 50px
                 width: auto
                 max-width: 190px
                 height: auto
+
+                &.small
+                    max-height: 70px
+
+                &.big
+                    max-height: 45px
 
 
 @media screen and (min-width: 640px)
@@ -439,7 +445,7 @@ header
 
     #when-where
         display: flex
-        justify-content: center
+        justify-content: flex-start
         align-items: stretch
         flex-direction column
 
@@ -456,14 +462,15 @@ header
 @media screen and (min-width: 850px)
     #join
         display: flex
-        justify-content: center
+        justify-content: flex-start
         align-items: stretch
         flex-direction column
 
         h1
-            width: 60%
+            width: 50%
             +font-size(3.6)
             margin-bottom: 0
+            text-align: left
 
         img
             width: 30%
